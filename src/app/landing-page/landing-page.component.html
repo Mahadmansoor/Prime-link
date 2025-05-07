@@ -1,4 +1,4 @@
-<header #header class="header">
+<!-- <header #header class="header">
     <div class="container">
         <img src="assets/logo.png" alt="Logo" class="logo">
         <nav class="nav">
@@ -8,7 +8,32 @@
             <a href="#bpoServices">Bpo Services</a>
         </nav>
     </div>
-</header>
+</header> -->
+
+<header class="header">
+    <div class="container">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      
+      <!-- Hamburger icon -->
+      <button class="hamburger" id="hamburger" (click)="toggleSidebar()">&#9776;</button>
+      
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar" [class.show]="isSidebarOpen">
+        <a href="#about" (click)="closeSidebar()">About</a>
+        <a href="#services" (click)="closeSidebar()">Services</a>
+        <a href="#contact" (click)="closeSidebar()">Contact</a>
+        <a href="#bpoServices" (click)="closeSidebar()">BPO Services</a>
+      </div>
+  
+      <!-- Normal nav (desktop) -->
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#bpoServices">Bpo Services</a>
+      </nav>
+    </div>
+  </header>
 
 <main>
     <section class="hero">

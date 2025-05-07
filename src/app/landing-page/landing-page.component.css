@@ -84,6 +84,57 @@ body {
     width: 100%;
 }
 
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 7rem; /* below the header */
+    right: 0;
+    left: auto;
+    width: 250px;
+    height: calc(100% - 7rem);
+    background-color: #111;
+    padding: 2rem;
+    z-index: 999;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #d4af37;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .nav {
+      display: none; /* Hide main nav */
+    }
+  
+    .hamburger {
+      display: block; /* Show hamburger */
+    }
+  
+    .sidebar.show {
+      display: flex;
+    }
+  }
+
 /* Hero Section */
 .hero {
     padding: 100px 0;
