@@ -89,8 +89,8 @@ body {
 .hamburger {
     display: none;
     font-size: 2rem;
-    color: #111;
-    /* background-color: transparent; */
+    color: #000;
+    background-color: #d4af37;
     cursor: pointer;
   }
   
@@ -104,7 +104,7 @@ body {
     left: auto;
     width: 250px;
     height: calc(100% - 7rem);
-    /* background-color: #111; */
+    background-color: #111;
     padding: 2rem;
     z-index: 999;
   }
