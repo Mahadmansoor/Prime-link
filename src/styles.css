@@ -5,10 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -111,9 +116,28 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('assets/about-bg.jpg') no-repeat center center;
+    background: linear-gradient(rgba(20,20,20,0.96), rgba(20,20,20,0.96)), url('assets/about us.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
-    opacity: 0.1;
+    opacity: 1;
 }
+.services {
+    background-color: #1f1f1f;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/services bg.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 1;
+  }

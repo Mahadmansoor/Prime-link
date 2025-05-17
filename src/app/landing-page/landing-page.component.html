@@ -10,8 +10,11 @@
     </div>
 </header> -->
 
-<header class="header">
+<header class="header" id="home">
     <div class="container">
+      <!-- Home button moved to the left -->
+      <a href="javascript:void(0)" class="home-btn" (click)="scrollToTop()">Home</a>
+      
       <img src="assets/logo.png" alt="Logo" class="logo">
       
       <!-- Hamburger icon -->
@@ -22,7 +25,7 @@
         <a href="#about" (click)="closeSidebar()">About</a>
         <a href="#services" (click)="closeSidebar()">Services</a>
         <a href="#contact" (click)="closeSidebar()">Contact</a>
-        <a href="#bpoServices" (click)="closeSidebar()">BPO Services</a>
+        <a href="javascript:void(0)" (click)="closeSidebar(); scrollToTop()">Home</a>
       </div>
   
       <!-- Normal nav (desktop) -->
@@ -30,7 +33,6 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a href="#bpoServices">Bpo Services</a>
       </nav>
     </div>
   </header>
@@ -71,21 +73,24 @@
             <h2>Our Core Services</h2>
             <div class="service-cards">
                 <div class="card">
-                    <div class="card-back">
-                        <h3>24/7 Dispatching & Call Handling</h3>
-                        <p>We manage your incoming bookings, driver communication, and dispatch operations around the clock to keep your fleet moving smoothly — day and night.</p>
+                    <img src="assets/dispatch.jpg" alt="Dispatch Services" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">24/7 Dispatching & Call Handling</h3>
+                        <p class="card-desc">We manage your incoming bookings, driver communication, and dispatch operations around the clock to keep your fleet moving smoothly — day and night.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-back">
-                        <h3>Customer Support & Admin Assistance</h3>
-                        <p>From handling customer queries to managing cancellations, updates, and account notes — our trained staff ensures every interaction is professional and accurate.</p>
+                    <img src="assets/support.jpg" alt="Customer Support" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Customer Support & Admin Assistance</h3>
+                        <p class="card-desc">From handling customer queries to managing cancellations, updates, and account notes — our trained staff ensures every interaction is professional and accurate.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-back">
-                        <h3>Driver Onboarding & Operational Support</h3>
-                        <p>We assist in onboarding new drivers, verifying documents, updating profiles, and providing ongoing backend support to maintain smooth daily operations.</p>
+                    <img src="assets/onboarding.jpg" alt="Driver Onboarding" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Driver Onboarding & Operational Support</h3>
+                        <p class="card-desc">We assist in onboarding new drivers, verifying documents, updating profiles, and providing ongoing backend support to maintain smooth daily operations.</p>
                     </div>
                 </div>
             </div>
@@ -123,7 +128,7 @@
                 <div class="choose-card">
                     <div class="card-back">
                         <h3>Transparent Operations</h3>
-                        <p>You’ll receive detailed shift reports, real-time updates, and clear communication to stay fully informed.</p>
+                        <p>You'll receive detailed shift reports, real-time updates, and clear communication to stay fully informed.</p>
                     </div>
                 </div>
                 <div class="choose-card">
