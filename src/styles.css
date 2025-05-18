@@ -123,7 +123,7 @@ body {
     opacity: 1;
 }
 .services {
-    background-color: #1f1f1f;
+    /* background-color: #1f1f1f; */
     position: relative;
     overflow: hidden;
   }
@@ -135,7 +135,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/services bg.jpg') no-repeat center center;
+    background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/services.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;

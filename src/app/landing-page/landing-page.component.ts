@@ -2,12 +2,21 @@ import { AfterViewInit, Component, Inject, OnInit, PLATFORM_ID } from '@angular/
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule, NgClass } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
+import { AboutUsComponent } from '../components/about-us/about-us.component';
+import { CoreServicesComponent } from '../components/core-services/core-services.component';
+import { WhyChooseUsComponent } from '../components/why-choose-us/why-choose-us.component';
+import { ContactUsComponent } from '../components/contact-us/contact-us.component';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.css'
+  styleUrl: './landing-page.component.css',
+  imports: [
+    AboutUsComponent,
+    CoreServicesComponent,
+    WhyChooseUsComponent,
+    ContactUsComponent
+  ]
 })
 export class LandingPageComponent {
   isSidebarOpen = false;
