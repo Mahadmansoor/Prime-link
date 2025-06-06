@@ -13,7 +13,7 @@
 <header class="header" id="home">
     <div class="container">
       <!-- Home button moved to the left -->
-      <a href="javascript:void(0)" class="home-btn" (click)="scrollToTop()">Home</a>
+      <a (click)="scrollToSection('home')" class="home-btn">Home</a>
       
       <img src="assets/logo.png" alt="Logo" class="logo">
       
@@ -22,28 +22,27 @@
       
       <!-- Sidebar -->
       <div class="sidebar" id="sidebar" [class.show]="isSidebarOpen">
-        <a href="#about" (click)="closeSidebar()">About</a>
-        <a href="#services" (click)="closeSidebar()">Services</a>
-        <a href="#contact" (click)="closeSidebar()">Contact</a>
-        <a href="javascript:void(0)" (click)="closeSidebar(); scrollToTop()">Home</a>
+        <a (click)="scrollToSection('about'); closeSidebar()">About</a>
+        <a (click)="scrollToSection('services'); closeSidebar()">Services</a>
+        <a (click)="scrollToSection('contact'); closeSidebar()">Contact</a>
       </div>
   
       <!-- Normal nav (desktop) -->
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a (click)="scrollToSection('about')">About</a>
+        <a (click)="scrollToSection('services')">Services</a>
+        <a (click)="scrollToSection('contact')">Contact</a>
       </nav>
     </div>
 </header>
 
 <main>
-    <section class="hero">
+    <section class="hero" #home>
         <div class="container">
             <div class="hero-content">
                 <h1>Prime <span>Link</span> Services</h1>
                 <p>Seamless Services & Strong Connections</p>
-                <a href="#contact" class="btn">Get Started</a>
+                <button (click)="scrollToSection('contact')" class="btn">Get Started</button>
             </div>
         </div>
     </section>
@@ -55,10 +54,18 @@
     background-attachment: fixed;">
     </section>
 
-    <app-about-us></app-about-us>
-    <app-core-services></app-core-services>
-    <app-why-choose-us></app-why-choose-us>
-    <app-contact-us></app-contact-us>
+    <section #about>
+        <app-about-us></app-about-us>
+    </section>
+    
+    <section #services>
+        <app-core-services></app-core-services>
+    </section>
+    
+    <section class="parallax-bg">
+        <app-why-choose-us></app-why-choose-us>
+        <app-contact-us></app-contact-us>
+    </section>
 
     <section class="logo-slider">
         <div class="logo-slider-container">
@@ -120,7 +127,7 @@
 <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
-        <h2>Prime <span>Link</span></h2>
+        <h2>Prime <span>Link </span>Services</h2>
         <p>Delivering excellence in BPO services tailored for your success.</p>
       </div>
       <div class="footer-links">
@@ -133,8 +140,8 @@
       </div>
       <div class="footer-contact">
         <h3>Contact Us</h3>
-        <p>Email: support&#64;primelink.com</p>
-        <p>Phone: +1 234 567 8901</p>
+        <p>Email: info&#64;primelinkservices.co.uk</p>
+        <p>Phone: +93 3455067967</p>
       </div>
     </div>
     <div class="footer-bottom">

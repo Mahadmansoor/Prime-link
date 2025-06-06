@@ -1,6 +1,6 @@
 .contact-section {
     padding: 5rem 3rem;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 /* .contact-section h2 {
@@ -24,12 +24,18 @@
 
 .contact-form input,
 .contact-form textarea {
+    background-color: transparent;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    color: #ffffff;
 }
-
+.contact-form ::placeholder{
+    color: #ffffff;
+    /* font-size: 1rem; */
+    /* font-weight: 600; */
+}
 .contact-form-btn {
     background-color: #d4af37;
     color: white;
@@ -41,8 +47,8 @@
     transition: background-color 0.3s ease;
 }
 
-.contact-form-btn:hover {
-    background-color: #fff;
-    color: #d4af37;
+/* .contact-form-btn:hover {
+    /* background-color: #fff; */
+    /* color: #d4af37;
     border: 1px solid #d4af37;
-} 
+}   */
