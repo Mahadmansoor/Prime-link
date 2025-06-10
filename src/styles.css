@@ -164,11 +164,7 @@ body {
 }
 
 .parallax-bg {
-<<<<<<< HEAD
     background-image: url('assets/contact.jpg');
-=======
-    background-image: url('assets/contact.webp');
->>>>>>> 349c59b3e00e60e2b006c93866cb245d9e9368fe
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
