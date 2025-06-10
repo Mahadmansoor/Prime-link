@@ -1,7 +1,8 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
-export const routes: Routes = [
+const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent
@@ -17,9 +18,11 @@ export const routes: Routes = [
   {
     path: 'why-choose-us',
     loadComponent: () => import('./components/why-choose-us/why-choose-us.component').then(m => m.WhyChooseUsComponent)
-  },
-  {
-    path: '**',
-    redirectTo: ''
   }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { } 

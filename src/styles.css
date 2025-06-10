@@ -70,7 +70,6 @@ body {
 /* Global Parallax Styles */
 .parallax {
     position: relative;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,6 +79,7 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
+    overflow: hidden;
 }
 
 .parallax::before {
@@ -118,17 +118,18 @@ body {
     bottom: 0;
     background: linear-gradient(rgba(20,20,20,0.96), rgba(20,20,20,0.96)), url('assets/about us.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
+    /* transform: translateZ(0); */
+    /* will-change: transform; */
     z-index: -1;
     opacity: 1;
 }
+
 .services {
-    /* background-color: #1f1f1f; */
     position: relative;
     overflow: hidden;
-  }
-  
-  .services::before {
+}
+
+.services::before {
     content: '';
     position: absolute;
     top: 0;
@@ -137,17 +138,18 @@ body {
     bottom: 0;
     background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/services.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
+    /* transform: translateZ(0); */
+    /* will-change: transform; */
     z-index: -1;
     opacity: 1;
-  }
-  .choose-us {
-    /* background-color: #1f1f1f; */
+}
+
+.choose-us {
     position: relative;
     overflow: hidden;
-  }
-  
-  .choose-us::before {
+}
+
+.choose-us::before {
     content: '';
     position: absolute;
     top: 0;
@@ -156,51 +158,33 @@ body {
     bottom: 0;
     background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/contact.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     z-index: -1;
     opacity: 1;
-  }
-  /* .contact-section {
-    /* background-color: #1f1f1f; */
-    /* position: relative;
-    overflow: hidden;
-  }
-  
-  .contact-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/contact.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    opacity: 1;
-  }  */
+}
 
 .parallax-bg {
-  background-image: url('assets/contact.jpg');
-  /* background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('assets/contact.jpg') no-repeat center center; */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  position: relative;
+    background-image: url('assets/contact.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    /* transform: translateZ(0); */
+    /* will-change: transform; */
 }
 
 /* Optional: overlay for readability */
 .parallax-bg::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.3); 
-  z-index: 0;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3); 
+    z-index: 0;
+    pointer-events: none;
 }
+
 .parallax-bg > * {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
