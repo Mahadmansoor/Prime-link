@@ -533,7 +533,6 @@ body {
 .logo-slider-track {
     display: flex;
     animation: scroll 30s linear infinite;
-    width: calc(200px * 16); /* Adjust based on number of logos */
 }
 
 .logo-slide {
@@ -562,11 +561,10 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-200px * 8)); /* Half of total width */
+        transform: translateX(-50%);
     }
 }
 
-/* Pause animation on hover */
 .logo-slider-container:hover .logo-slider-track {
     animation-play-state: paused;
 }

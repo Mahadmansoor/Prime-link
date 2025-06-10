@@ -1,9 +1,39 @@
 <section class="contact-section" id="contact">
     <h2>Contact Us</h2>
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button class="contact-form-btn" type="submit">Send Message</button>
+    <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <input 
+            type="text" 
+            placeholder="Your Name" 
+            required
+            [(ngModel)]="formData.name"
+            name="name">
+        <input 
+            type="email" 
+            placeholder="Your Email" 
+            required
+            [(ngModel)]="formData.email"
+            name="email">
+        <textarea 
+            rows="5" 
+            placeholder="Your Message" 
+            required
+            [(ngModel)]="formData.message"
+            name="message"></textarea>
+        <button 
+            class="contact-form-btn" 
+            type="submit"
+            [disabled]="isLoading">
+            {{ isLoading ? 'Sending...' : 'Send Message' }}
+        </button>
     </form>
+
+    <!-- Success Message -->
+    <div class="alert alert-success" *ngIf="showSuccess">
+        Thank you for your message! We'll get back to you soon.
+    </div>
+
+    <!-- Error Message -->
+    <div class="alert alert-error" *ngIf="showError">
+        {{ errorMessage }}
+    </div>
 </section> 

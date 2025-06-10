@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AboutUsComponent } from './components/about-us/about-us.component';
-import { CoreServicesComponent } from './components/core-services/core-services.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 export const routes: Routes = [
   {
@@ -11,15 +8,15 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutUsComponent
+    loadComponent: () => import('./components/about-us/about-us.component').then(m => m.AboutUsComponent)
   },
   {
     path: 'services',
-    component: CoreServicesComponent
+    loadComponent: () => import('./components/core-services/core-services.component').then(m => m.CoreServicesComponent)
   },
   {
     path: 'contact',
-    component: ContactUsComponent
+    loadComponent: () => import('./components/contact-us/contact-us.component').then(m => m.ContactUsComponent)
   },
   {
     path: '**',
