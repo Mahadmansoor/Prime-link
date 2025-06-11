@@ -12,7 +12,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('/assets/contact.webp') no-repeat center center;
+    background: linear-gradient(rgba(20,20,20,0.92), rgba(20,20,20,0.92)), url('/assets/onboarding.webp') no-repeat center center;
     background-size: cover;
     /* background-attachment: fixed; */
     z-index: -1;
@@ -33,6 +33,7 @@
     margin-top: 40px;
     padding: 0 20px;
     margin: 0 20px;
+    perspective: 1000px;
 }
 
 .choose-card {
@@ -50,7 +51,7 @@
 }
 
 .choose-card:hover {
-    transform: translateY(-5px);
+    transform: translateZ(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
